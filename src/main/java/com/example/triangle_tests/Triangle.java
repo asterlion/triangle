@@ -9,11 +9,11 @@ public class Triangle {
     static boolean checkIfTriangle(Integer a, Integer b, Integer c) {
         boolean triangleExist = false;
         if (a <= 0 || b <= 0 || c <= 0) {
-            System.out.println("The sides of the triangle must be greater 0.");
-        } else if (a + b < c && a + c < b && b + c < a) {
-            System.out.println("Triangle doesn't exist.");
-        } else if (a + b >= c && a + c >= b && b + c >= a) {
-            System.out.println("Triangle exists.");
+            System.out.println("Стороны треугольника должны быть больше нуля");
+        } else if (a + b <= c || a + c <= b || b + c <= a) {
+            System.out.println("Треугольника не существует");
+        } else if (a + b > c && a + c > b && b + c > a) {
+            System.out.println("Треугольник существует");
             triangleExist = true;
         }
         return triangleExist;
@@ -23,22 +23,23 @@ public class Triangle {
         String type;
         if (a == b || a == c || b == c) {
             if (a == b && a == c) {
-                System.out.println("Triangle is Equilateral.");
-                type = "Equilateral";
+                System.out.println("Равносторонний треугольник");
+                type = "Равносторонний";
             } else if (a + b == c || a + c == b || b + c == a) {
-                System.out.println("Triangle is Generated.");
-                type = "Generated";
+                System.out.println("Треугольника не существует");
+                type = "Не существует";
             } else {
-                System.out.println("Triangle is Isosceles.");
-                type = "Isosceles";
+                System.out.println("Равнобедренный треугольник");
+                type = "Равнобедренный";
             }
         } else if (a + b > c && a + c > b && b + c > a) {
-            System.out.println("Triangle is Scalene.");
-            type = "Scalene";
+            System.out.println("Разносторонний треугольник");
+            type = "Разносторонний";
         } else {
-            System.out.println("No triangle");
+            System.out.println("Не существует");
             type = null;
         }
         return type;
     }
+
 }

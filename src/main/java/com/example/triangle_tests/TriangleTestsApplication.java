@@ -10,7 +10,7 @@ import java.util.Scanner;
 import static com.example.triangle_tests.Triangle.*;
 
 @SpringBootApplication
-public class TriangleTestsApplication {
+public class  TriangleTestsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TriangleTestsApplication.class, args);
@@ -19,29 +19,28 @@ public class TriangleTestsApplication {
         String user_answer;
 
         while (true) {
-            System.out.println("Press any key to continue or type \"quit\" to exit.");
-            System.out.println("answer: ");
+            System.out.println("Нажмите любую клавишу для продолжения или \"q\" для выхода");
+            System.out.println("Ваш ответ: ");
             user_answer = sc.next();
-            if (user_answer.equals("quit")) {
-                System.out.println("Exit");
+            if (user_answer.equals("q")) {
+                System.out.println("Выход");
                 break;
             }
 
-            System.out.println("\nEnter 3 numbers greater than zero to test triangle. ");
+            System.out.println("\nВведите три целых числа больше нуля");
             try {
-                System.out.println("a: ");
+                System.out.println("Сторона a: ");
                 int a = sc.nextInt();
-                System.out.println("b: ");
+                System.out.println("Сторона b: ");
                 int b = sc.nextInt();
-                System.out.println("c: ");
+                System.out.println("Сторона c: ");
                 int c = sc.nextInt();
                 if (triangle.checkIfTriangle(a, b, c)) {
                     checkTriangleType(a, b, c);
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("Invalid data was provided. " +
-                        "The sides of the triangle must be an integer number greater 0.");
+                System.out.println("Ошибка ввода, введите целые числа больше нуля");
             }
         }
     }

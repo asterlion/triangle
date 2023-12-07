@@ -19,13 +19,15 @@ public class TriangleTest {
     public static Collection testDataIsTriangleExists() {
         return Arrays.asList(
                 new Object[][]{
-                        {5, 6, 7, true},
-                        {1, 5, 5, true},
-                        {20, 20, 20, true},
-                        {100, 100, 200, true},
-                        {50, 3, 2, false},
-                        {20, 2, 0, false},
-                        {-20, 2, 0, false},
+                        {7, 10, 9, true},
+                        {7, 10, 10, true},
+                        {7, 7, 7, true},
+                        {5, 5, 10, false},
+                        {0, 1, 2, false},
+                        {1, 0, 2, false},
+                        {1, 2, 0, false},
+                        {-1, 2, 3, false},
+                        {1, -2, 3, false},
                 }
         );
     }

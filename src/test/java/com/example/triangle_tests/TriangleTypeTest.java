@@ -18,13 +18,14 @@ public class TriangleTypeTest {
     public static Collection testDataTypeTriangle() {
         return Arrays.asList(
                 new Object[][]{
-                        {5, 6, 7, "Scalene"},
-                        {1, 5, 5, "Isosceles"},
-                        {20, 20, 20, "Equilateral"},
-                        {100, 100, 200, "Generated"},
-                        {50, 3, 2, null},
-                        {20, 2, 0, null},
-                        {-20, 2, 0, null},
+                        {7, 10, 9, "Разносторонний"},
+                        {7, 10, 10, "Равнобедренный"},
+                        {7, 7, 7, "Равносторонний"},
+                        {5, 5, 10, "Не существует"},
+                        {0, 1, 2, null},
+                        {1, 0, 2, null},
+                        {1, 2, 0, null},
+                        {-1, 2, 3, null},
                 });
     }
 
